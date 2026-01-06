@@ -1,5 +1,9 @@
 import logging
-from opentelemetry import logs
+try:
+    from opentelemetry import logs
+except ImportError:
+    from opentelemetry import _logs as logs
+
 from opentelemetry.sdk.logs import LoggerProvider, LoggingHandler
 from opentelemetry.sdk.logs.export import BatchLogProcessor, ConsoleLogExporter
 from opentelemetry.sdk.resources import Resource

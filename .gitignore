@@ -27,3 +27,5 @@ venv/
 credentials/*
 !credentials/.gitkeep
 logs/
+auto_config.sh
+auto_config_local.sh
