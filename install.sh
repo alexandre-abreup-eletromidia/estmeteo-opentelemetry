@@ -86,7 +86,8 @@ fi
 # Instalar dependências do sistema
 log_info "Instalando dependências do sistema..."
 apt-get update
-apt-get install -y git curl wget bc
+# Ubuntu 24.04 pode precisar de python3-full ou python3-venv explícito
+apt-get install -y git curl wget bc python3-full python3-venv python3-pip
 
 # Criar diretório de instalação
 log_info "Criando diretório de instalação..."
